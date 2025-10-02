@@ -51,13 +51,11 @@ Qué hace automáticamente:
 
 * Crea `/home/USER/HTB_<nombre_sin_.htb>` con subcarpetas `nmap`, `exploit`, `varios`.
 * Añade la línea `IP nombre` a `/etc/hosts`.
-* Guarda la IP en `/home/USER/.config/bin/target`.
 * Lanza `sudo openvpn archivoHTB.ovpn` y se queda esperando.
 * Si presionas `Ctrl+C`, intenta:
 
   * Detener la VPN.
   * Eliminar la entrada añadida en `/etc/hosts`.
-  * Vaciar `/home/USER/.config/bin/target`.
 
 ---
 
@@ -67,15 +65,6 @@ Qué hace automáticamente:
 * ⚠️ **Rutas hardcodeadas**: `/home/USER/...` y `archivoHTB.ovpn` están fijadas en el script. Cámbialas según tu usuario y estructura.
 * ⚠️ **Ejecución con sudo**: el script invoca `sudo` para acciones privilegiadas; se te solicitará contraseña si corresponde.
 * El limpiador elimina las líneas que contienen la IP indicada; si el mismo IP aparece para otras entradas, podrían verse afectadas. Revisa manualmente `/etc/hosts` si dudas.
-
----
-
-## Personalización recomendada
-
-* Cambiar `target_file_path` y la base de `ruta_base` para que se adapten a tu usuario (p. ej. usar `~` o `os.path.expanduser("~")`).
-* Usar un archivo de configuración (JSON/YAML) para evitar rutas hardcodeadas.
-* Añadir validaciones de IP y nombre.
-* Implementar backup de `/etc/hosts` antes de modificarlo.
 
 ---
 
