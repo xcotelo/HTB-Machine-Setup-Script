@@ -5,32 +5,15 @@ Crea estructura de carpetas, añade la entrada en `/etc/hosts` y lanza una VPN. 
 
 ---
 
-## Contenido
-
-* `setup_htb.py` — script principal (pega el contenido del script que tengas).
-
----
 
 ## Requisitos
 
 * Python 3.x
 * `sudo` para:
-
   * modificar `/etc/hosts`
   * ejecutar `openvpn`
 * `openvpn` instalado y el archivo de configuración `archivoHTB.ovpn` disponible en el directorio desde el que ejecutes el script (o ajusta la ruta en el script).
 * Permisos para crear carpetas en `/home/USER` (el script usa rutas hardcodeadas).
-
----
-
-## Instalación / Preparación
-
-1. Crea un archivo, por ejemplo `setup_htb.py`, y pega el script.
-2. (Opcional) Hazlo ejecutable:
-
-```bash
-chmod +x setup_htb.py
-```
 
 ---
 
