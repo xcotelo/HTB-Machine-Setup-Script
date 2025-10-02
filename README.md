@@ -18,8 +18,8 @@ Crea estructura de carpetas, añade la entrada en `/etc/hosts`, guarda la IP en 
 
   * modificar `/etc/hosts`
   * ejecutar `openvpn`
-* `openvpn` instalado y el archivo de configuración `lab_xcotelo.ovpn` disponible en el directorio desde el que ejecutes el script (o ajusta la ruta en el script).
-* Permisos para crear carpetas en `/home/xian` (el script usa rutas hardcodeadas).
+* `openvpn` instalado y el archivo de configuración `archivoHTB.ovpn` disponible en el directorio desde el que ejecutes el script (o ajusta la ruta en el script).
+* Permisos para crear carpetas en `/home/USER` (el script usa rutas hardcodeadas).
 
 ---
 
@@ -45,26 +45,26 @@ python3 setup_htb.py
 El script pedirá:
 
 * IP de la máquina (ej. `10.10.10.5`)
-* Nombre de la máquina (ej. `merda.htb`)
+* Nombre de la máquina (ej. `maquina.htb`)
 
 Qué hace automáticamente:
 
-* Crea `/home/xian/HTB_<nombre_sin_.htb>` con subcarpetas `nmap`, `exploit`, `varios`.
+* Crea `/home/USER/HTB_<nombre_sin_.htb>` con subcarpetas `nmap`, `exploit`, `varios`.
 * Añade la línea `IP nombre` a `/etc/hosts`.
-* Guarda la IP en `/home/xian/.config/bin/target`.
-* Lanza `sudo openvpn lab_xcotelo.ovpn` y se queda esperando.
+* Guarda la IP en `/home/USER/.config/bin/target`.
+* Lanza `sudo openvpn archivoHTB.ovpn` y se queda esperando.
 * Si presionas `Ctrl+C`, intenta:
 
   * Detener la VPN.
   * Eliminar la entrada añadida en `/etc/hosts`.
-  * Vaciar `/home/xian/.config/bin/target`.
+  * Vaciar `/home/USER/.config/bin/target`.
 
 ---
 
 ## Advertencias / Seguridad
 
 * ⚠️ **Modifica `/etc/hosts`**: el script añade y elimina líneas en `/etc/hosts`. Revisa siempre el contenido del archivo antes de ejecutar.
-* ⚠️ **Rutas hardcodeadas**: `/home/xian/...` y `lab_xcotelo.ovpn` están fijadas en el script. Cámbialas según tu usuario y estructura.
+* ⚠️ **Rutas hardcodeadas**: `/home/USER/...` y `archivoHTB.ovpn` están fijadas en el script. Cámbialas según tu usuario y estructura.
 * ⚠️ **Ejecución con sudo**: el script invoca `sudo` para acciones privilegiadas; se te solicitará contraseña si corresponde.
 * El limpiador elimina las líneas que contienen la IP indicada; si el mismo IP aparece para otras entradas, podrían verse afectadas. Revisa manualmente `/etc/hosts` si dudas.
 
@@ -86,7 +86,7 @@ Qué hace automáticamente:
 
 ```
 Introduce la IP de la máquina de HTB: 10.10.10.5
-Introduce un nombre para la máquina (ej: merda.htb): merda.htb
+Introduce un nombre para la máquina (ej: maquina.htb): merda.htb
 ```
 
 3. Verás confirmaciones:
@@ -94,7 +94,7 @@ Introduce un nombre para la máquina (ej: merda.htb): merda.htb
 ```
 ✓ Entrada añadida a /etc/hosts
 ✓ IP 10.10.10.5 guardada en target
-✓ Configuración completada. Carpeta creada en /home/xian/HTB_merda
+✓ Configuración completada. Carpeta creada en /home/USSE/HTB_maquina
 Iniciando conexión VPN...
 ```
 
