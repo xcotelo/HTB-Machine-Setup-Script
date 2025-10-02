@@ -82,7 +82,6 @@ Introduce un nombre para la máquina (ej: maquina.htb): merda.htb
 
 ```
 ✓ Entrada añadida a /etc/hosts
-✓ IP 10.10.10.5 guardada en target
 ✓ Configuración completada. Carpeta creada en /home/USSE/HTB_maquina
 Iniciando conexión VPN...
 ```
