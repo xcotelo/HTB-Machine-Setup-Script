@@ -1,7 +1,7 @@
 # HTB Machine Setup Script
 
 Pequeño script en Python para automatizar la preparación de una máquina de laboratorio (p. ej. HackTheBox).
-Crea estructura de carpetas, añade la entrada en `/etc/hosts`, guarda la IP en un archivo `target` (útil para polybar) y lanza una VPN. Al presionar `Ctrl+C` el script intenta limpiar la configuración (elimina la entrada añadida en `/etc/hosts` y vacía el archivo `target`).
+Crea estructura de carpetas, añade la entrada en `/etc/hosts` y lanza una VPN. Al presionar `Ctrl+C` el script intenta limpiar la configuración (elimina la entrada añadida en `/etc/hosts`).
 
 ---
 
